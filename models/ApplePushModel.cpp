@@ -41,8 +41,8 @@ ApplePushModel::ApplePushModel(const std::string &pJson):mPusher("/certs/apple/c
 
             Json::Value apn = options["apn"];
             std::string test(fast.write(options));
-            if (apn.isMember("text")) {
-               std::string temp = std::move(apn["text"].asString());
+            if (options.isMember("text")) {
+               std::string temp = std::move(options["text"].asString());
                 unsigned long index = 0;
                 while(true){
                     index = temp.find('\n',index);
