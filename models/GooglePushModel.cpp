@@ -154,6 +154,8 @@ bool GooglePushModel::sendMessage() {
     msg["message"] = mGcm;
     msg["ejson"] = mPayload;
     msg["msgcnt"] = mBadge;
+    msg["color"] = "#E82257";
+    msg["icon"] = "ic_stat_name";
 
     obj["to"] = mDeviceToken;
     obj["notification"] = msg;
