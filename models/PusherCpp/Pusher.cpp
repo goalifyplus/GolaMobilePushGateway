@@ -96,8 +96,8 @@ void Pusher::pushNotification(PusherContent pushContent,
 	if (this->tokenStringVector.size() > 0) {
 		//convert the content to json string
 		ostringstream stringStream;
-		stringStream << "{\"aps\":{\"alert\":" << pushContent.content
-        << ",\"badge\":" << pushContent.badge << ",\"sound\":\""
+		stringStream << "{\"aps\":{\"alert\":\"" << pushContent.content
+        << "\",\"badge\":" << pushContent.badge << ",\"sound\":\""
         << pushContent.sound << "\"}";
 		if (pushContent.userData.empty()) {
 			stringStream << "}";
