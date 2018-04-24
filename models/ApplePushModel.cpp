@@ -101,7 +101,8 @@ bool ApplePushModel::sendMessage() {
     }
 
     content.badge = mBadge;
-    content.content = mTitle + ": " + mApn;
+    content.title = mTitle;
+    content.content = mApn;
     content.sound = mSound;
 
 
